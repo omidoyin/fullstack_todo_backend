@@ -15,6 +15,12 @@ const todoListSchema = new schema({
         type:Boolean,
         default:false
     },
+    imageUrl:{
+        type:String,
+    },
+    imageCloud_id :{
+        type:String,
+    },
     userid:mongoose.Schema.Types.ObjectId
 })
 

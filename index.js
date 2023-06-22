@@ -10,7 +10,7 @@ const Credentials = require("./middleware/Credentials");
 const cors = require("cors");
 const corsOption = require("./config/corsOption");
 const multer = require("multer");
-const cloudinary = require("cloudinary").v2;
+const cloudinary = require("cloudinary").v2; 
 
 connectDB();
 
@@ -27,6 +27,7 @@ app.use("/users", require("./routes/users"));
 app.use("/login", require("./routes/login"));
 app.use("/logout", require("./routes/logout"));
 app.use("/refresh", require("./routes/refresh"));
+app.use("/upload", require("./routes/fileUpload"));
 app.use(verifyJWT);
 app.use("/todolist", require("./routes/todolist"));
 
