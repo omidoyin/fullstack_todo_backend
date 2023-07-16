@@ -1,27 +1,30 @@
 //define schema
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 const schema = mongoose.Schema;
 
-const todoListSchema = new schema({
-    taskname:{
-        type:String,
-        required:true
+const todoListSchema = new schema(
+  {
+    taskname: {
+      type: String,
+      required: true,
     },
-    task:{
-        type:String,
-        required:true
+    task: {
+      type: String,
+      required: true,
     },
-    iscompleted:{
-        type:Boolean,
-        default:false
+    iscompleted: {
+      type: Boolean,
+      default: false,
     },
-    imageUrl:{
-        type:String,
+    imageUrl: {
+      type: String,
     },
-    imageCloud_id :{
-        type:String,
+    imageCloud_id: {
+      type: String,
     },
-    userid:mongoose.Schema.Types.ObjectId
-})
+    userid: mongoose.Schema.Types.ObjectId,
+  },
+  { timestamps: true }
+);
 
-module.exports = mongoose.model('Todos',todoListSchema)
+module.exports = mongoose.model("Todos", todoListSchema);
